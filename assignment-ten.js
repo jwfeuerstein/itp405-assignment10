@@ -18,7 +18,7 @@ app.get("/api/github/:username", (request, response) => {
         .get(`https://api.github.com/users/${username}`)
         .then((apiResponse) => {
           let count = apiResponse.data.public_repos;
-
+          let test = 1;
           fs.writeFile(filename, count, (error) => {
             console.log("Wrote to file.");
           });
